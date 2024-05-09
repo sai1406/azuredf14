@@ -1,0 +1,30 @@
+{
+	"name": "ds_ecdc_datalist",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_ablob_covidreportingasa",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "ecdc_file_list_for_2_files.json",
+				"container": "configfile"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"sourceRelativeURL": {
+					"type": "string"
+				},
+				"sinkFileName": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
